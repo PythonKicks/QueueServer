@@ -1,0 +1,65 @@
+@font-face {
+	font-family: 'varelaRound';
+	src: 
+		url('../fonts/VarelaRound-Regular.ttf') 
+		format('opentype');
+}
+
+body {
+    font-family: 'varelaRound', sans-serif;
+    color: black;
+    text-align: center;
+}
+
+#main-container {
+    margin: 0;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.main-header {
+    text-transform: uppercase;
+}
+
+.noselect {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dot {
+    height: 50px;
+    width: 50px;
+    margin-top: 200px;
+    background-color: #0e9cdd;
+    border-radius: 100%;
+    /* position: absolute; */
+}
+
+.dot + .dot {
+    margin-left: 25px;
+}
+
+.game-info {
+    display: none;
+}
+
+#game-info-icon:hover + .game-info {
+    display: block;
+}
+
+#animation {
+    margin-top: 50px;
+    margin-bottom: 75px;
+
+    width: 100vw;
+    height: min-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,21 @@
+{
+    "name": "queue-game",
+    "version": "0.0.0",
+    "description": "A FIFO queue for online flash sales with a built-in game.",
+    "main": "main.js",
+    "scripts": {
+        "start": "node main.js"
+    },
+    "author": "LNC",
+    "devDependencies": {},
+    "dependencies": {
+        "async-mutex": "^0.2.2",
+        "body-parser": "^1.19.0",
+        "cookie-parser": "^1.4.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.9.6",
+        "morgan": "^1.10.0",
+        "websocket": "^1.0.31"
+    }
+}
