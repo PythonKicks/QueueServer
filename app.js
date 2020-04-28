@@ -64,6 +64,7 @@ app.use(function(error, req, res, next) {
     }, null, 4));
     res.status(500);
     res.json({
+        param: process.env.MONGO_USER,
         message: 'Invalid'
     })
 });
