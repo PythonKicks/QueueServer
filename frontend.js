@@ -18,7 +18,8 @@ router.get('/', function(req, res, next) {
         session = JSON.parse(sessionStr);
     }
     let bypassExpiryMs = session ? session.ets || 0 : 0;
-    let index = global.customerQueue.getCustomerIndex(session.id);
+    let customerId = session ? session.id : '';
+    let index = global.customerQueue.getCustomerIndex(customerId);
     let createNewSession = !sessionStr || (index === -1 && Date.now() >= bypassExpiryMs);
     if (createNewSession) {
         let customer = new Customer({
