@@ -3,6 +3,6 @@ const router = express.Router();
 
 const ManageController = require('../controllers/manage');
 
-router.get('/next', ManageController.letInNextCustomer);
+router.post('/next', ManageController.letInNextCustomer);
 
 module.exports = router;
