@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const PollingController = require('../controllers/polling');
+const ManageController = require('../controllers/manage');
 
-router.get('/update', PollingController.updateCustomer);
-router.post('/next', PollingController.letInNextCustomer);
+router.get('/next', ManageController.letInNextCustomer);
 
 module.exports = router;

@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 
 const pollingRoutes = require('./api/routes/polling');
 const gameRoutes = require('./api/routes/game');
+const manageRoutes = require('./api/routes/manage');
+
 const frontendRoutes = require('./frontend');
 
 const CONNECT_URL = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_CONNECT_STR}`;
@@ -56,6 +58,7 @@ app.use('/', frontendRoutes);
 app.use('/api', bodyParser.json());
 app.use('/api/poll', pollingRoutes);
 app.use('/api/game', gameRoutes);
+app.use('/api/manage', manageRoutes);
 
 app.use(function(error, req, res, next) {
     console.log('Uncaught error: '+JSON.stringify({
