@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const http = require('http');
 global.cookieParser;
 global.cookieParser = require('cookie-parser');
